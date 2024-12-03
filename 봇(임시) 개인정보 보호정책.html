@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>개인정보 보호정책</title>
+    <style>body{font-family:Arial,sans-serif;margin:0;padding:0;background:linear-gradient(to bottom,#2c3e50,#3498db);color:white;line-height:1.6}.container{max-width:900px;margin:20px auto;padding:20px;background-color:rgba(0,0,0,0.7);border-radius:10px}h1,h2{margin-bottom:15px}ul{list-style-type:square;margin-left:20px}p{margin-bottom:15px}button{background-color:#3498db;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;margin-top:20px}button:hover{background-color:#2980b9}</style>
+</head>
+<body>
+    <div class="container">
+        <h1>개인정보 보호정책</h1>
+        <div><h2>1. 수집하는 정보</h2><ul><li>디스코드 사용자 ID: 사용자 인증 및 봇 기능 제공을 위해 사용됩니다.</li><li>디스코드 사용자 이름 및 태그: 맞춤형 서비스를 제공하기 위해 사용됩니다.</li><li>메시지 내용: 봇의 기능을 위해 사용됩니다. (예: 명령어 처리, 반응 등)</li></ul><p>주의: 봇은 사용자가 요청한 권한 내에서만 정보를 수집합니다. 특정 상황에서 법적 요구나 범죄 수사에 협조할 수 있습니다.</p></div>
+        <div><h2>2. 정보 사용 목적</h2><ul><li>봇 기능 제공</li><li>사용자 인증</li><li>서비스 개선</li><li>커뮤니티 플랫폼 발전</li></ul></div>
+        <div><h2>3. 정보 공유 및 제3자 제공</h2><p>본 봇은 개인정보를 제3자와 공유하지 않으며, 법적 요구나 범죄 수사에 협조할 때만 정보를 제공할 수 있습니다.</p></div>
+        <div><h2>4. 정보 보안</h2><p>개인정보는 암호화되어 저장되며, 불법적인 접근을 막기 위한 보안 조치를 취하고 있습니다. 그러나 인터넷을 통한 데이터 전송은 100% 안전하다고 보장할 수 없습니다.</p></div>
+        <div><h2>5. 사용자 권리</h2><p>사용자는 언제든지 본인의 개인정보를 확인, 수정, 삭제할 수 있습니다. 동의하지 않으면 철회할 수 있습니다.</p></div>
+        <div><h2>6. 정보 저장 기간</h2><p>개인정보는 봇 기능 제공에 필요한 기간 동안만 저장되며, 이후 안전하게 삭제됩니다. 법적 요구 시 저장될 수 있습니다.</p></div>
+        <div><h2>7. 변경 사항 통지</h2><p>정책 변경 시 즉시 공지되며, 새로운 정책은 공지 후 적용됩니다.</p></div>
+        <div><h2>8. 문의</h2><p>개인정보 보호정책에 대해 궁금한 점이 있으면 관리자에게 문의해 주세요.</p></div>
+        <button onclick="sendWebhook()">정리 보기</button>
+    </div>
+    <script>
+        function sendWebhook(){const webhookURL='YOUR_DISCORD_WEBHOOK_URL';const data={content:"본 봇은 디스코드 사용자 ID, 이름, 메시지 내용 등을 수집하여 인증, 기능 제공, 서비스 개선 등에 사용합니다. 개인정보는 제3자와 공유되지 않으며, 법적 요구가 있을 경우에만 제공될 수 있습니다."};fetch(webhookURL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(response=>response.json()).then(data=>{console.log('웹훅 전송 성공',data)}).catch(error=>{console.error('웹훅 전송 실패',error)});
+        }
+    </script>
+</body>
+</html>
